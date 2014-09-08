@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace FindSmallest
 {
@@ -35,16 +37,21 @@ namespace FindSmallest
         static void Main()
         {
 
-
             foreach (int[] d in Data)
             {
-                Thread t = new Thread(() => //FindSmallest(Data[2]));
-                {
-                    int i = FindSmallest(d);
-                    Console.WriteLine(i);
-                });
-                t.Start();
+                Task<int> nyopg = new Task<int>
             }
+
+
+            //foreach (int[] d in Data)
+            //{
+            //    Thread t = new Thread(() => //FindSmallest(Data[2]));
+            //    {
+            //        int i = FindSmallest(d);
+            //        Console.WriteLine(i);
+            //    });
+            //    t.Start();
+            //}
         }
     }
 }
